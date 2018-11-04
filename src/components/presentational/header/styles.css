@@ -1,0 +1,19 @@
+.Header{
+    width: auto;
+    float: right;
+    right: 0;
+    position: relative;
+}
+
+.portfolio{
+    margin-right: 28px;
+    vertical-align: bottom
+}
+
+.portfolio:hover{
+    cursor: pointer;
+}
+
+.dayNightIcon{
+    vertical-align: bottom
+}

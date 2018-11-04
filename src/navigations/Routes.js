@@ -17,7 +17,7 @@ const Routes = () => (
       <Route path='/portfolio' component={Portfolio}/>
       <Route path='/detail' component={PortfolioDetail}/>
       <Route path='/search/:category' component={SearchResult}/>
-      <Route path='*' component={SearchResult}/>
+      <Route path='*' component={Home}/>
     </Switch>
   </main>
 )

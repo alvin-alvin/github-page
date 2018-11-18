@@ -16,9 +16,9 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="Header">
+      <div style={{display:'inline', alignItems:'center',alignSelf:'start'}}>
         <Link style={{textDecoration:'none', color:'black'}} to='/portfolio'>
-          <span onClick={() => this.navigateToPortfolio()} className="portfolio">PORTFOLIO</span>
+          <span className="portfolioText" onClick={() => this.navigateToPortfolio()} style={{marginRight:4}}>PORTFOLIO</span>
         </Link>
 
         <img alt='timeIcon' className="dayNightIcon" src={require("../../../assets/image/sunrise.png")}></img>

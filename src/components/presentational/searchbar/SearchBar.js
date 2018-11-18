@@ -11,16 +11,14 @@ class SearchBar extends Component {
     this.onSearchClicked = this.onSearchClicked.bind(this);
     this.state = {
       keyword: '',
-      changed:false,
+      changed: false,
     };
 
   }
 
   onSearchClicked() {
     let input = this.state.keyword
-    // this.context.router.push('/search');
     this.props.history.push('/search/' + input)
-
   }
 
   onChangeText(text) {
@@ -38,14 +36,17 @@ class SearchBar extends Component {
 
 
   render() {
+    const styles = DarkTheme
     let index = Math.floor(Math.random() * this.props.placeholder.length)
     return (
-      <div className="SearchBar">
+      <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-between'}}>
+      {/* <div style={{display:'flex'}} className="SearchBar"> */}
         <input placeholder={this.props.placeholder[index]}
-          value={this.state.changed?this.state.keyword:this.props.text}
+        style={{display:'flex',flex:1,paddingTop:16,paddingBottom:16,paddingLeft:8,paddingRight:8,border:'1px solid #606060'}}
+          value={this.state.changed ? this.state.keyword : this.props.text}
           onChange={(event) => this.onChangeText(event.target.value)}
           onKeyPress={this.handleKeyPress} />
-        <div onClick={this.onSearchClicked} className="arrowRight">
+        <div onClick={this.onSearchClicked} style={{display:'flex',position:'absolute',border:'1px solid #DBDBDB',width:40,height:40,borderRadius:20,float:'right',marginTop:2,right:16,background:'#fff',boxShadow:'0px 2px #c4c4c4'}}>
           <img alt='arrow-right' className="arrowRightIcon" src={require("../../../assets/image/arrow-right.svg")}></img>
         </div>
       </div>
@@ -54,3 +55,29 @@ class SearchBar extends Component {
 }
 
 export default withRouter(SearchBar);
+
+export const DarkTheme={
+  CONTAINER:{
+    display:'flex',
+    flex:1,
+    flexDirection:'column',
+  },
+  nameText:{
+    fontSize: 34,
+    margin: 0,
+    color: '#FFF'
+  }
+}
+
+export const LightTheme={
+  CONTAINER:{
+    display:'flex',
+    flex:1,
+    flexDirection:'column',
+  },
+  nameText:{
+    fontSize: 34,
+    margin: 0,
+    color: '#000'
+  }
+}

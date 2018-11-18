@@ -1,9 +1,10 @@
 .carouselWrapper{
-    max-width: 65%;
+    max-width: 70%;
     height: auto;
-    width: 65%;
-    min-width: 65%;
-    display: inline-block;
+    width: 70%;
+    min-width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .carouselWrapper:first-child{
@@ -43,4 +44,10 @@
     margin-top: 8px;
     text-align: start;
     display: block;
+}
+
+.categoryWrapper{
+    display:flex;
+    flex-direction: row;
+
 }

@@ -34,12 +34,6 @@ class App extends Component {
     if (this.state.width < 800) {
       return (
         <div className="App">
-          {window.location.href.includes('/detail') ?
-            null
-            :
-            <Header />
-          }
-
           <Routes />
         </div >
       );

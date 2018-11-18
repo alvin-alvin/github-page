@@ -1,13 +1,19 @@
 .Home{
-
+    width: 90vw;
 }
 
 .textLarge {
     margin: 0;
-    display: 'inline';
-    font-size: 32pt;
+    font-size: 34;
     color: #494949;
-    display: block;
+}
+
+@media only screen and (max-width: 360px) { 
+    .textLarge {
+        margin: 0;
+        font-size: 32pt;
+        color: #494949;
+    }
 }
 
 .itsNestedIf {

@@ -27,7 +27,7 @@ export default function ExperienceCard() {
       {list.map((item) => {
         return (
           <div style={{ display: 'flex' }}>
-            <div style={{ marginTop:2, marginRight:8, display: 'inline-block', borderRadius: 8, width: 16, height: 16, background: '#606060' }} />
+            <div style={{ marginTop:6, marginRight:8, display: 'inline-block', borderRadius: 4, width: 8, height: 8, background: '#606060' }} />
 
             <div key={item.id} style={{ marginBottom: 16, display: 'inline-block' }}>
               <span style={{ fontSize: 18, color: 'black' }}>{item.periode}</span>

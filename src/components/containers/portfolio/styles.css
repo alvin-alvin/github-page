@@ -1,5 +1,6 @@
 .carousel{
-    display: inline-flex;
+    display: flex;
+	flex-direction: row;
     margin-right: -16px;
     margin-left: -16px;
     margin-top: 40px;

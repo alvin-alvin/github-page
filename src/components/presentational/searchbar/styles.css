@@ -1,5 +1,6 @@
 .SearchBar{
-    display: inline-flex;
+    display: flex;
+    width: 100%;
 }
 
 .SearchBar input{
@@ -7,7 +8,7 @@
     padding: 16px 8px;
     border-radius: 4px;
     border: 1px solid #606060;
-    width: 80vw;
+    width: calc(100% - 32px);
     font-size: medium;
 }
 
@@ -31,9 +32,10 @@
     width: 40px;
     height: 40px;
     float: right;
-    margin-left: -28px;
-    margin-top: 8.5px;
-    margin-bottom: 8.5px;
+    right: 32px;
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 

@@ -17,3 +17,13 @@
 .dayNightIcon{
     vertical-align: bottom
 }
+
+@media only screen and (max-width: 499px) { 
+    .dayNightIcon{
+        vertical-align: bottom
+    }
+
+    .portfolioText{
+        font-size: 24;
+    }
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './styles.js';
 import SearchBar from '../../presentational/searchbar/SearchBar'
 import SearchCard from '../../presentational/searchCard'
+import Header from '../../presentational/header/Header'
 import { withRouter } from 'react-router';
 import { getSearchCategory } from '../../../helper/SearchbarHelper'
 
@@ -11,7 +12,7 @@ class SearchResult extends Component {
         super(props);
         this.state = {
             category: '',
-            search:'',
+            search: '',
         };
     }
 
@@ -23,7 +24,7 @@ class SearchResult extends Component {
 
     componentDidMount() {
         const search = this.props.location.pathname.replace('/search/', '')
-        this.setState({search})
+        this.setState({ search })
         if (getSearchCategory(search)) {
             this.setState({ category: getSearchCategory(search).toLowerCase() })
         } else {
@@ -33,7 +34,7 @@ class SearchResult extends Component {
 
     onRouteChanged() {
         const search = this.props.location.pathname.replace('/search/', '')
-        this.setState({search})
+        this.setState({ search })
         if (getSearchCategory(search)) {
             this.setState({ category: getSearchCategory(search).toLowerCase() })
         } else {
@@ -42,29 +43,29 @@ class SearchResult extends Component {
 
     }
 
-    renderResult(){
-        if(this.state.category){
-            return(
+    renderResult() {
+        if (this.state.category) {
+            return (
                 <SearchCard title={this.state.category} />
             )
-        }else if(this.state.search && !this.state.category){
-            return(
-                <div style={{marginTop:16, padding:32, border:'1px dotted #606060'}}>
-                        <span>Penelusuran Anda - </span>
-                        <span style={{fontWeight:'bold'}}>{this.state.search}</span>
-                        <span> - tidak cocok dengan dokumen apa pun.</span>
-                        <br/>
-                        <br/>
-                        <span>Saran : </span>
-                        <br/>
-                        <span>   - Pastikan semua kata dieja dengan benar.</span>
-                        <br/>
-                        <span>   - Coba kata kunci yang lain.</span>
-                        <br/>
-                        <span>   - Coba kata kunci yang lebih umum.</span>
-                    </div>
+        } else if (this.state.search && !this.state.category) {
+            return (
+                <div style={{ marginTop: 16, padding: 32, border: '1px dotted #606060' }}>
+                    <span style={{fontSize:14}}>Penelusuran Anda - </span>
+                    <span style={{fontSize:14, fontWeight:'bold'}}>{this.state.search}</span>
+                    <span style={{fontSize:14}}> - tidak cocok dengan dokumen apa pun.</span>
+                    <br />
+                    <br />
+                    <span style={{fontSize:14}}>Saran : </span>
+                    <br />
+                    <span style={{fontSize:14}}>   - Pastikan semua kata dieja dengan benar.</span>
+                    <br />
+                    <span style={{fontSize:14}}>   - Coba kata kunci yang lain.</span>
+                    <br />
+                    <span style={{fontSize:14}}>   - Coba kata kunci yang lebih umum.</span>
+                </div>
             )
-        }else{
+        } else {
             return null
         }
     }
@@ -72,16 +73,17 @@ class SearchResult extends Component {
 
     render() {
         return (
-            <div style={styles.wrapper}>
-                <span style={styles.topLeftName}>Alvin</span>
-                <br />
-                <span style={styles.topLeftName}>Tanurwijaya</span>
-                <br />
-                <br />
-                <br />
-                <div style={styles.searchBarWrapper}>
-                    <SearchBar text={this.state.search} placeholder={'placeholder'} />
-                </div >
+            <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
+                <div style={{ alignSelf: 'flex-end' }}>
+                    <Header />
+                </div>
+
+                <div style={{ marginBottom: 16 }}>
+                    <h1 style={{ fontSize: 34, margin: 0 }}>Alvin</h1>
+                    <h1 style={{ fontSize: 34, margin: 0 }}>Tanurwijaya</h1>
+                </div>
+
+                <SearchBar text={this.state.search} placeholder={''} />
 
                 {this.renderResult()}
 

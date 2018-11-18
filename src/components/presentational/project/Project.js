@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import './styles.css'
 import SmallCategoryTag from '../SmallCategoryTag'
+import { withRouter } from 'react-router';
 
 class Project extends Component {
 
@@ -19,7 +20,7 @@ class Project extends Component {
   }
 
   handleClick(title) {
-    alert(title)
+    this.props.history.push('/detail/' + title)
   }
 
   render() {
@@ -30,12 +31,14 @@ class Project extends Component {
         <span className="projectTitle">{this.props.item.title}</span>
         {/* <p className="projectDesc" style={{maxWidth:this.state.componentWidth}}>{this.props.item.desc}</p> */}
         <p className="projectDesc" >{this.props.item.desc}</p>
+        <div className="categoryWrapper">
         <SmallCategoryTag category={'a'}/>
       <SmallCategoryTag category={'a'}/>
+        </div>
       </div>
     
     );
   }
 }
 
-export default Project;
+export default withRouter(Project);

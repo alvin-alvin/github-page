@@ -4,7 +4,8 @@ import './styles.css';
 
 import Header from '../../presentational/header/Header'
 import SearchBar from '../../presentational/searchbar/SearchBar'
-import BaseComponent from '../../presentational/BaseComponent';
+import BaseComponent from '../../presentational/BaseComponent'
+import {getTheme} from '../../../helper/Theme'
 
 class Home extends BaseComponent {
 
@@ -24,7 +25,7 @@ class Home extends BaseComponent {
 
 
   render() {
-    const styles = DarkTheme
+    const styles = getTheme()
     return (
       <div style={styles.CONTAINER}>
 

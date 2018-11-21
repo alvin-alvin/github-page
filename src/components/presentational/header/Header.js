@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import './styles.css'
+import {getTheme} from '../../../helper/Theme'
 
 class Header extends Component {
 
@@ -15,10 +15,11 @@ class Header extends Component {
   }
 
   render() {
+    const styles = getTheme()
     return (
       <div style={{display:'inline', alignItems:'center',alignSelf:'start'}}>
         <Link style={{textDecoration:'none', color:'black'}} to='/portfolio'>
-          <span className="portfolioText" onClick={() => this.navigateToPortfolio()} style={{marginRight:4}}>PORTFOLIO</span>
+          <span onClick={() => this.navigateToPortfolio()} style={styles.DEFAULT_TEXT_COLOR}>PORTFOLIO</span>
         </Link>
 
         <img alt='timeIcon' className="dayNightIcon" src={require("../../../assets/image/sunrise.png")}></img>

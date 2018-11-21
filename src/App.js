@@ -3,6 +3,7 @@ import './App.css';
 
 import Routes from './navigations/Routes'
 import Header from './components/presentational/header/Header'
+import {getTheme} from './helper/Theme'
 
 class App extends Component {
 
@@ -31,9 +32,10 @@ class App extends Component {
 
   render() {
     // console.log(window.location.href.includes('/detail'))
+    const styles = getTheme()
     if (this.state.width < 800) {
       return (
-        <div className="App">
+        <div style={styles.ROOT_WRAPPER}>
           <Routes />
         </div >
       );

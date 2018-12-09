@@ -4,9 +4,14 @@ import AgeCard from './Age'
 import EducationCard from './Education'
 import ExperienceCard from './Experience'
 import PoopCard from './Poop'
+import DefaultCard from './Default'
+import {RESPONSE_LIST} from '../../../helper/ResponseList'
+import { getTheme } from '../../../helper/Theme';
 
 
 export default function ({ title }) {
+
+  let styles = getTheme()
 
   function renderCard(categories) {
     switch (title) {
@@ -19,16 +24,16 @@ export default function ({ title }) {
       case 'poo':
         return <PoopCard />
       default:
-        return null
+        return DefaultCard(RESPONSE_LIST[categories.toUpperCase()])
     }
 
   }
 
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.headerWrapper}>
-        <span style={styles.title}>Alvin Tanurwijaya</span>
-        <span style={styles.category}> / {title}</span>
+    <div style={styles.RESULT_CARD_WRAPPER}>
+      <div style={styles.RESULT_CARD_HEADER}>
+        <span style={styles.RESULT_CARD_TITLE}>Alvin Tanurwijaya</span>
+        <span style={styles.RESULT_CARD_CATEGORY}> / {title}</span>
       </div>
       <div style={{ padding: 16 }}>
         {renderCard(title)}

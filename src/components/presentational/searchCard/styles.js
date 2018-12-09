@@ -1,10 +1,11 @@
 export default{
     wrapper:{
         marginTop: 16,
-        backgroundColor: 'white',
-        width: '80vw',
+        // backgroundColor: 'white',
+        backgroundColor: '#323232',
         borderRadius: 4,
-        border: '1px solid black',
+        // border: '1px solid black',
+        border: '1px solid white',
     },
     headerWrapper:{
         borderBottom: '1px solid black',

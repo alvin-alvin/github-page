@@ -20,8 +20,11 @@ export const WORDLIST = {
   EXPERIENCE_2 : 'KERJA MANA',
   EXPERIENCE_3 : 'PERNAH KERJA',
 
-  POO_1: 'TAI LU',
-  POO_2: 'TAIK LU'
+  POO_1: 'TAI',
+  POO_2: 'TAI LU',
+  POO_3: 'TAIK LU',
+
+  CHIPMUNK_1: 'CHIPMUNK'
 
 
 }

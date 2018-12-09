@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getTheme } from '../../../helper/Theme';
 
 export default function ExperienceCard() {
   const list = [
@@ -21,20 +22,22 @@ export default function ExperienceCard() {
       job_role: 'Fullstack Developer & UI Designer'
     }
   ]
+
+  let styles = getTheme()
   return (
     <div>
 
       {list.map((item) => {
         return (
           <div style={{ display: 'flex' }}>
-            <div style={{ marginTop:6, marginRight:8, display: 'inline-block', borderRadius: 4, width: 8, height: 8, background: '#606060' }} />
+            <div style={styles.BULLETING} />
 
             <div key={item.id} style={{ marginBottom: 16, display: 'inline-block' }}>
-              <span style={{ fontSize: 18, color: 'black' }}>{item.periode}</span>
+              <span style={{ ...styles.DEFAULT_TEXT_COLOR, fontSize: 18 }}>{item.periode}</span>
               <br />
-              <span style={{ fontSize: 14, color: 'black' }}>{item.company}</span>
+              <span style={{ ...styles.DEFAULT_TEXT_COLOR,fontSize: 14 }}>{item.company}</span>
               <br />
-              <span style={{ fontSize: 14, color: '#606060' }}>{item.job_role}</span>
+              <span style={{ ...styles.SEMI_DARK_TEXT_COLOR ,fontSize: 14}}>{item.job_role}</span>
             </div>
           </div>
         )

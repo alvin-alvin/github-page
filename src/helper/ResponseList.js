@@ -5,4 +5,5 @@ export const RESPONSE_LIST = {
   LAHIR: 'Lahir di Palembang, 10 September 1997',
   EXPERIENCE : '',
   POO: '💩',
+  CHIPMUNK : 'No, I\'m not that Alvin'
 }

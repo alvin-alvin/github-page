@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { getTheme } from '../../../helper/Theme';
 
 export default function DefaultCard(text) {

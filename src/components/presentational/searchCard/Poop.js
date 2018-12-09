@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default function AgeCard() {
   return (
     <div style={{display:'flex'}}>
-    <p style={{margin:0,fontSize:42,alignSelf:'center',textAlign:'center'}}>💩</p>
+    <span role="img" aria-label="poop" style={{margin:0,fontSize:42,alignSelf:'center',textAlign:'center'}}>💩</span>
     </div>
   )
 }

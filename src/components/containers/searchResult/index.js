@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './styles.js';
 import SearchBar from '../../presentational/searchbar/SearchBar'
 import SearchCard from '../../presentational/searchCard'
 import Header from '../../presentational/header/Header'

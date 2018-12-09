@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Routes from './navigations/Routes'
-import Header from './components/presentational/header/Header'
 import { getTheme } from './helper/Theme'
 
 class App extends Component {

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Media from "react-media";
+import React from 'react'
 import './styles.css';
 
 import Header from '../../presentational/header/Header'

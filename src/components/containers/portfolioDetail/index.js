@@ -12,12 +12,6 @@ class PortfolioDetail extends Component {
   }
 
   componentDidMount() {
-
-
-  }
-
-
-  componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
   }

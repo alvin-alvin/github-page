@@ -19,8 +19,8 @@ class Portfolio extends Component {
       desc: 'Desc website 1 dibikin panjang buat tes overlap spannya.',
       category: ['Design']
     }
-    ],
-      this.category = ["All", "Android", "iOS", "Design"],
+    ]
+      this.category = ["All", "Android", "iOS", "Design"]
       this.state = {
         selectedCategory: '',
         filteredPortfolios: this.portfolios

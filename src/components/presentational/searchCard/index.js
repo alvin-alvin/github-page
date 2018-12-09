@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import styles from './styles'
+import React from 'react';
 import AgeCard from './Age'
 import EducationCard from './Education'
 import ExperienceCard from './Experience'

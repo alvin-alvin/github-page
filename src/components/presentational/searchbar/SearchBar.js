@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles.css'
-import { searchbarHelper, getSearchCategory } from '../../../helper/SearchbarHelper'
 import { withRouter } from 'react-router'
 import {getTheme} from '../../../helper/Theme'
 

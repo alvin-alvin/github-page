@@ -45,7 +45,7 @@ class SearchBar extends Component {
           value={this.state.changed ? this.state.keyword : this.props.text}
           onChange={(event) => this.onChangeText(event.target.value)}
           onKeyPress={this.handleKeyPress} />
-        <div onClick={this.onSearchClicked} style={{ display: 'flex', position: 'absolute', border: '1px solid #DBDBDB', width: 40, height: 40, borderRadius: 20, float: 'right', marginTop: 2, right: 16, background: '#fff', boxShadow: '0px 2px #c4c4c4' }}>
+        <div onClick={this.onSearchClicked} style={{ display: 'flex', border: '1px solid #DBDBDB', width: 40, height: 40, borderRadius: 20, float: 'right', background: '#fff', boxShadow: '0px 2px #c4c4c4', alignSelf:'center' }}>
           <img alt='arrow-right' className="arrowRightIcon" src={require("../../../assets/image/arrow-right.svg")}></img>
         </div>
         {/* <input style={{h}}/> */}

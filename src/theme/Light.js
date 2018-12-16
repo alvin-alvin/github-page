@@ -50,7 +50,7 @@ export default {
   SEARCHBAR_CONTAINER: {
     display: 'flex',
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
   inputText: {
     display: 'flex',
@@ -63,7 +63,8 @@ export default {
     borderRadius: 4,
     fontSize: 16,
     color:'',
-    border: '1px solid #606060'
+    border: '1px solid #606060',
+    marginRight: 8
   },
 
   //SEARCH RESULT

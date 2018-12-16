@@ -48,8 +48,8 @@ export default {
   // SEARCHBAR
   SEARCHBAR_CONTAINER: {
     display: 'flex',
+    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-between'
   },
   inputText: {
     display: 'flex',
@@ -63,7 +63,8 @@ export default {
     fontSize: 16,
     color: '#FFF',
     border: '1px solid #FFFFFF',
-    outline: 'none'
+    outline: 'none',
+    marginRight: 8
   },
 
   //SEARCH RESULT

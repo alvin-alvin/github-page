@@ -3,6 +3,11 @@ import './App.css';
 
 import Routes from './navigations/Routes'
 import { getTheme } from './helper/Theme'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 
 class App extends Component {
 
@@ -18,6 +23,7 @@ class App extends Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+    library.add(fab,faEnvelope)
   }
 
   componentWillUnmount() {
@@ -41,9 +47,9 @@ class App extends Component {
           </div>
           {new Date().getHours() > 20 &&
           <div style={{ bottom: 0, border: '1px solid white', borderRadius: 4, margin: 16, display: 'flex', flexDirection: 'column' }}>
-            <div style={{ padding: 16 }}>
-              <p style={{ margin: 0, color: 'white', fontSize: 13 }}>Hey, I think you access my website on bed time</p>
-              <p style={{ margin: 0, color: 'white', fontSize: 21, fontWeight: 'bold' }}>Here’s the night version of my website</p>
+            <div style={{ padding: 16, display:'flex',flexDirection:'column' }}>
+              <span style={{ margin: 0, color: 'white', fontSize: 13 }}>Hey, I think you access my website on bed time</span>
+              <span style={{ margin: 0, color: 'white', fontSize: 21, fontWeight: 'bold' }}>Here’s the night version of my website</span>
             </div>
           </div>
           }

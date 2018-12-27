@@ -7,19 +7,19 @@ export default function ContactsCard() {
   const list = [
     {
       id: 1,
-      icon: ['fab','instagram'],
+      icon: ['fab', 'instagram'],
       account: '@tanurwijaya',
       link: 'https://www.instagram.com/tanurwijaya/'
     },
     {
       id: 2,
-      icon: ['fab','dribbble'],
+      icon: ['fab', 'dribbble'],
       account: 'tanurwijaya',
       link: 'https://dribbble.com/tanurwijaya'
     },
     {
       id: 3,
-      icon: ['fab','github'],
+      icon: ['fab', 'github'],
       account: 'tanurwijaya',
       link: 'https://github.com/tanurwijaya'
     },
@@ -37,13 +37,13 @@ export default function ContactsCard() {
 
       {list.map((item) => {
         return (
-          <div style={{ display: 'flex', alignItems:'center', marginBottom:16 }}>
-            <FontAwesomeIcon icon={item.icon} color="white" />
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
+            <FontAwesomeIcon icon={item.icon} color={styles.DEFAULT_COLOR} />
 
-            <div key={item.id} style={{ display: 'inline-block', marginLeft:8 }}>
-            <a href={item.link} style={{ textDecoration: 'none', color: 'black' }}>
-              <span style={{ ...styles.DEFAULT_TEXT_COLOR, fontSize: 14 }}>{item.account}</span>
-            </a>
+            <div key={item.id} style={{ display: 'inline-block', marginLeft: 8 }}>
+              <a href={item.link} style={{ textDecoration: 'none', color: 'black' }}>
+                <span style={{ ...styles.DEFAULT_TEXT_COLOR, fontSize: 14 }}>{item.account}</span>
+              </a>
             </div>
           </div>
         )

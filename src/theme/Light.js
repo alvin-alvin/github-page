@@ -22,6 +22,8 @@ export default {
     background: '#606060'
   },
 
+  DEFAULT_COLOR: 'black',
+
 
   //ROOT
   ROOT_WRAPPER: {

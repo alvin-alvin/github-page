@@ -5,9 +5,9 @@ export const WORDLIST = {
   UMUR_2 : 'UMUR',
 
   //KULIAH
-  KULIAH_1 : 'STUDI',
-  KULIAH_2 : 'JURUSAN',
-  KULIAH_3 : 'KULIAH',
+  EDUCATION_1 : 'STUDI',
+  EDUCATION_2 : 'JURUSAN',
+  EDUCATION_3 : 'KULIAH',
 
   //LAHIR
   LAHIR_1 : 'LAHIR',

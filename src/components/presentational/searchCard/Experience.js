@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTheme } from '../../../helper/Theme';
+import { getTheme } from '../../../helper/Theme'
 
 export default function ExperienceCard() {
   const list = [

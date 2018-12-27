@@ -19,7 +19,7 @@ export default function ({ title }) {
         return <AgeCard />
       case 'experience':
         return <ExperienceCard />
-      case 'kuliah':
+      case 'education':
         return <EducationCard />
       case 'poo':
         return <PoopCard />

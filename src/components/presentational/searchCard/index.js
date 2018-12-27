@@ -3,6 +3,7 @@ import AgeCard from './Age'
 import EducationCard from './Education'
 import ExperienceCard from './Experience'
 import PoopCard from './Poop'
+import ContactsCard from './Contacts'
 import DefaultCard from './Default'
 import {RESPONSE_LIST} from '../../../helper/ResponseList'
 import { getTheme } from '../../../helper/Theme';
@@ -22,6 +23,8 @@ export default function ({ title }) {
         return <EducationCard />
       case 'poo':
         return <PoopCard />
+        case 'contact':
+        return <ContactsCard/>
       default:
         return DefaultCard(RESPONSE_LIST[categories.toUpperCase()])
     }

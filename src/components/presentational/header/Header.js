@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { getTheme } from '../../../helper/Theme'
-import SocialMedia from './SocialMedia';
-import {SOCIAL_MEDIA} from '../../../helper/Constants'
 
 class Header extends Component {
 
@@ -37,9 +35,7 @@ class Header extends Component {
         {this.state.isModalVisible &&
         <div style={{display:'flex',background:'white',flex:1}}>
         <div style={{ display: 'flex', position: 'absolute', top: 56, right: 0, height: 'auto', width: 'auto', maxWidth: 300, background: 'white', flexWrap: 'wrap',boxShadow:'0px 2px #c4c4c4' }}>
-          {SOCIAL_MEDIA.map((item, index) =>
-            <SocialMedia data={item} />
-          )}
+
         </div>
         </div>
         }
